@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: bisque;
+}
+header {
+    background-color: lightcoral;
+    text-align: center;
+}
+.nav {
+    background-color: lightgreen;
+    height: 50px;
+}
+nav ul {
+    padding: 15px 0 0 0;
+}
+nav ul li {
+    display: block;
+    float: left;
+    margin: auto;
+    list-style: none;
+    width: 25%;
+    text-align: center;
+}
+.bloque {
+    background-color: lightblue;
+    height: 520px;
+}
+.section {
+    display: block;
+    float: left;
+    width: 75%;
+    text-align: center;
+}
+.aside {
+    display: block;
+    float: right;
+    width: 25%;
+    text-align: center;
+}
+footer {
+    background-color: lightyellow;
+    text-align: center;
+}

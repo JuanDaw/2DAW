@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: bisque;
+}
+header {
+  background-color: lightcoral;
+  text-align: center;
+}
+.nav {
+  background-color: lightgreen;
+  height: 50px;
+}
+nav ul {
+  padding: 15px 0 0 0;
+}
+nav ul li {
+  display: block;
+  float: left;
+  margin: auto;
+  list-style: none;
+  width: 25%;
+  text-align: center;
+}
+.bloque {
+  background-color: lightblue;
+  height: 1020px;
+}
+.section {
+  display: block;
+  float: left;
+  width: 75%;
+  text-align: center;
+}
+.bloque1 {
+  background-color: lightgray;
+  display: block;
+  width: 75%;
+  height: 25%;
+  position: fixed;
+}
+.bloque2 {
+  background-color: lightpink;
+  display: block;
+  height: 25%;
+  position: relative;
+  top: 50px;
+  bottom: 50px;
+}
+.cont3 {
+  display: block;
+  background-color: lightcoral;
+  height: 220px;
+  margin: auto;
+}
+.caja1 {
+  background-color: lightsalmon;
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.caja2 {
+  background-color: lightsalmon;
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  top: 50px;
+  left: 350px;
+}
+.bloque3 {
+  background-color: lightgoldenrodyellow;
+  display: block;
+  height: 100px;
+  position: sticky;
+}
+.bloque4 {
+  background-color: lightgreen;
+  width: 75%;
+  position: absolute;
+}
+.cont5 {
+  background-color: darkcyan;
+  width: 600px;
+  height: 600px;
+  position: relative;
+  right: 100px;
+  left: 100px;
+}
+.caja11 {
+  background-color: darkgoldenrod;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 400px;
+  right: 400px;
+  margin: auto;
+  font-size: 1em;
+}
+.caja22 {
+  background-color: darkgreen;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 400px;
+  left: 400px;
+  margin: auto;
+  font-size: 1em;
+}
+.caja33 {
+  background-color: darkorchid;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 400px;
+  right: 400px;
+  margin: auto;
+  font-size: 1em;
+}
+.caja44 {
+  background-color: darkred;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 400px;
+  left: 400px;
+  margin: auto;
+  font-size: 1em;
+}
+.caja55 {
+  background-color: darkblue;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 1em;
+}
+.aside {
+  display: block;
+  float: right;
+  width: 25%;
+  text-align: center;
+}
+aside ul li {
+  display: block;
+  margin: auto;
+  list-style: none;
+  height: 25%;
+  text-align: center;
+}
+footer {
+  background-color: lightyellow;
+  text-align: center;
+}
