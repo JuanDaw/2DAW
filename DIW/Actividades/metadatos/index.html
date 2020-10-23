@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página</title>
+</head>
+<body>
+    <div id="div1" itemscope itemtype="https://schema.org/Product">
+        <header>
+            <img src="logo" itemprop="logo">
+            <h1 itemprop="category">Productos de belleza</h1>
+        </header>
+        
+        <section>
+            <img src="producto" itemprop="image">
+            <p>Este es el <span itemprop="name" itemprop="model">nombre</span> del producto y cuesta lo siguiente</p>
+            <p itemprop="description">Esta es la descripción del producto, las <span itemprop="height" itemprop="width">medidas</span>, el <span itemprop="weight">peso</span> y el <span itemprop="color">color</span> </p>
+            <p itemprop="material">Ingredientes</p>
+            <p itemprop="manufacturer">Esta es la marca del producto</p>
+            <p itemprop="isSimilarTo">Productos similares</p>
+            <p itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">Nota del producto <span itemprop="ratingValue">5</span><span itemprop="ratingCount">44</span></p>
+            <p itemprop="review" itemscope itemtype="https://schema.org/Review">Comentarios sobre el producto <span itemprop="author">autor</span></p>
+            <p itemprop="hasMerchantReturnPolicy">Política de devolución</p>
+        </section>
+    </div>
+</body>
+</html>
