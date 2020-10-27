@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: bisque;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-style: italic;
+  font-stretch: expanded;
+}
+#menu li {
+  display: block;
+  float: left;
+  margin: auto;
+  list-style: none;
+  width: 25%;
+}
+#me {
+  margin: auto;
+  display: ruby;
+  text-align: center;
+}
+#experiencia {
+  height: 35%;
+}
+#expertise {
+  background-color: cadetblue;
+  margin: auto;
+  text-align: center;
+  height: 75%;
+}
+#habilidades {
+  height: 55%;
+  margin: auto;
+}
+#habilidades ul li {
+  margin: auto;
+  height: 20%;
+}
+#educacion {
+  height: 35%;
+  margin: auto;
+}
+#education {
+  background-color: cadetblue;
+  margin: auto;
+  text-align: center;
+  height: 75%;
+}
+#perfiles-sociales {
+  height: 35%;
+  margin: auto;
+}
+#perfiles-sociales ul li {
+  height: 20%;
+}
+.linea {
+    width: 100%;
+}
