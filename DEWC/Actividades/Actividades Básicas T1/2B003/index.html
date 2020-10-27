@@ -8,18 +8,20 @@
 <body>
     <form action="index.html" method="get">
         <select name="salas" id="sal">
+            <option value="" disabled selected>Seleccione una Sala...</option>
             <option value="baile">Salón de baile</option>
             <option value="galeria">Galería</option>
             <option value="billar">Sala de billar</option>
             <option value="comedor">Comedor</option>
         </select>
         <select name="asesino" id="ase">
+            <option value="" disabled selected>Seleccione un Culpable...</option>
             <option value="parkes">Sr. Parkes</option>
             <option value="van">Sra. Van Cleve</option>
             <option value="sparr">Sra. Sparr</option>
             <option value="kale">Sr. Kalehoff</option>
         </select>
-        <input type="submit" value="¿Será el asesino?">
+        <input type="submit" onclick="mifuncion()" value="¿Será el asesino?">
     </form>
     <script src="2B003.js"></script>
 </body>
