@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2</title>
+</head>
+<body>
+    <h3>El factorial de su número</h3>
+    <script>
+        var num = Number(prompt("Introduce un número: "));
+        function factorial(numero) {
+            var total = 1;
+            if (numero == 0) {
+                return document.write("<p>El factorial de " + numero + " es " + total + "</p>");
+            } else {
+                for (i = 1; i <= numero; i++) {
+                total *= i; 
+                }
+                return document.write("<p>El factorial de " + numero + " es " + total + "</p>");
+            }
+        }
+        factorial(num);
+    </script>
+</body>
+</html>
