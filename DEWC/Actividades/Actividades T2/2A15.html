@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 15</title>
+</head>
+<body>
+    <h3>15. Realiza un script que determine si la cadena de texto que se le 
+        pide al usuario es un palíndromo, es decir, si se lee de la misma forma desde 
+        la izquierda y desde la derecha. Ejemplo de palíndromo complejo: "La ruta nos aporto otro paso natural". 
+    </h3>
+    <script>
+        var cadena = prompt("Introduce una palabra o frase")
+        var cadena_limpia = cadena.toLowerCase().trim().replace(/\s/g,'');
+        var palin = "";
+
+        for (i = 0, j = (cadena_limpia.length - 1); i < cadena_limpia.length; i++, j--) {
+            palin += cadena_limpia[j];
+        }
+
+        if (cadena_limpia == palin) {
+            document.write("<p>La palabra o frase \"" + cadena + "\" es un palíndromo</p>");
+        } else {
+            document.write("<p>La palabra o frase no es un palíndromo</p>");
+        }
+    </script>
+</body>
+</html>

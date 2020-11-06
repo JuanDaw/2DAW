@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 13</title>
+</head>
+<body>
+    <h3>13. Dado un array, con 6 elementos, dos valores booleanos, dos valores numéricos 
+        y dos cadenas de caracteres. Realizar un script que devuelva la siguiente información:  
+        Ejemplo: A partir del siguiente array que se proporciona:  
+        var valores = [true, 5, false, "hola", "adios", 2];
+        <ul>
+            <li>Determinar cuál de los dos elementos de texto es mayor</li>
+            <li>Determinar  el  resultado  de  dos  operaciones  lógicas realizadas  con  los  elementos booleanos</li>
+            <li>Determinar el resultado de dos operaciones aritméticas realizadas con los elementos numéricos</li>
+        </ul>
+    </h3>
+    <script>
+        var valores = [true, 5, false, 'hola', 'adios', 2];
+        var suma = 0;
+        var multi = 1;
+        var cadena_mayor = "";
+
+        for (i in valores) {
+            if ((!isNaN(valores[i])) && (valores[i] >= 0) && (valores[i] != true) && (valores[i] !=false)) {
+                suma += valores[i];
+                multi *= valores[i];
+                document.body.innerHTML += valores[i] + ' es un numero<br />';
+            } else if ((valores[i] == true) || (valores[i] == false)){
+                document.body.innerHTML += valores[i] + ' es un booleano<br />';
+            } else {
+                document.body.innerHTML += valores[i] + ' es una cadena<br />';
+                if (valores[i] > cadena_mayor) {
+                    cadena_mayor = valores[i];
+                }
+            }
+        }
+
+        alert('Suma = ' + suma + ' y multiplicacion = ' + multi);
+        alert('La mayor cadena es → ' + cadena_mayor);
+    </script>
+</body>
+</html>
