@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+</head>
+
+<body>
+    <h3>
+        1. Realiza un script que le pregunte al usuario la nota obtenida en un examen, y en función del resultado devuelva
+        “Suspenso”, “Aprobado”, “Notable” o “Sobresaliente”. Realiza otra versión utilizando el operador condicional ?:
+    </h3>
+    <script>
+        var num = prompt("Introduce tu nota: ");
+        if (num > 0 && num < 5) {
+            alert("Suspenso");
+        } else if (num >= 5 && num < 7) {
+            alert("Aprobado");
+        } else if (num >= 7 && num < 9) {
+            alert("Notable");
+        } else if (num >= 9 && num < 10) {
+            alert("Sobresaliente")
+        } else {
+            alert("No has introducido una nota válida")
+        }
+    </script>
+</body>
+
+</html>

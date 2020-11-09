@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 7</title>
+</head>
+
+<body>
+    <h3>
+        7. Realiza un script que muestre mediante mensajes los dígitos que componen un número. Éste tiene que ser menor
+        de 1000.
+    </h3>
+    <script>
+        var num = prompt("Introduce un número:");
+        if (num < 1000) {
+            for (i = 0; i < num.length; i++) {
+                document.write("<p>El dígito es: " + num.charAt(i) + "</p>");
+            }
+        } else {
+            document.write("<p>El número debe tener máximo 3 dígitos.</p>");
+        }
+
+    </script>
+</body>
+
+</html>

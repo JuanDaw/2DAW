@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4</title>
+</head>
+
+<body>
+    <h3>
+        4. Realiza un script que muestre en el documento los múltiplos de 8 comprendidos entre dos números que se
+        solicitarán al usuario. No importa el orden en el que los inserte el usuario, siempre se presentarán de menor al
+        mayor, ambos inclusive.
+    </h3>
+    <script>
+        var num1 = prompt("Introduce el primer número:");
+        var num2 = prompt("Introduce el segundo número:");
+        if (num1 < num2) {
+            while (num1 <= num2) {
+                if (num1 % 8 == 0) {
+                    document.write("<p>El " + num1 + " es múltiplo de 8</p>")
+                }
+                num1++
+            }
+        } else {
+            while (num2 <= num1) {
+                if (num2 % 8 == 0) {
+                    document.write("<p>El " + num2 + " es multiplo de 8</p>")
+                }
+                num2++
+            }
+        }
+    </script>
+</body>
+
+</html>
