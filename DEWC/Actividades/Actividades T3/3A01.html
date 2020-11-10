@@ -8,7 +8,11 @@
 <body>
     <h3>1. Calcula el tiempo restante en milisegundos entre la fecha actual y la fecha de fin de año.</h3>
     <script>
+        var hoy = new Date();
+        var fin = new Date(2020, 12, 31, 23, 59, 59, 0);
+        var res = fin.getTime() - hoy.getTime();
 
+        document.write("<h4>Quedan " + res + " milisegundos para fin de año</h4>");
     </script>
 </body>
 </html>

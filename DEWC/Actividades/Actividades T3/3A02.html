@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2</title>
+</head>
+<body>
+    <h3>2. Calcula tu edad, sin utiliza ningún método, trabajando con los milisegundos. </h3>
+    <script>
+        var hoy = new Date();
+        var fecha = new Date(1994, 5, 28, 0, 0, 0, 0);
+        var distancia = hoy.getTime() - fecha.getTime();
+        var res = Math.round((((distancia / 1000) / 3600) / 24) / 365.25)
+
+        document.write("<h4>Tienes " + res + " años</h4>")
+    </script>
+</body>
+</html>
