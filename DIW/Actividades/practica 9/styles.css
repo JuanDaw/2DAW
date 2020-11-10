@@ -68,7 +68,7 @@ body {
   margin-right: 15px;
   padding-top: 25px;
   position: relative;
-  bottom: 75px;
+  bottom: 125px;
 }
 #anuncio {
   height: 250px;
@@ -89,13 +89,13 @@ body {
 }
 #banner {
   background-image: url(./images/fondo_pr.jpg);
-  height: 200px;
+  height: 250px;
 }
 #banner h1 {
   font: normal 48px Georgia, "Times New Roman", Times, serif;
   text-align: right;
   color: #272d32;
-  padding-top: 50px;
+  padding-top: 49px;
 }
 #principal h2 {
   font: 30px Tahoma, Geneva, sans-serif;
@@ -104,7 +104,6 @@ body {
 }
 #principal h3 {
   font: 24px Tahoma, Geneva, sans-serif;
-  margin-bottom: 15px;
   font-family: Tahoma, Geneva, sans-serif;
 }
 #principal p {
@@ -124,4 +123,11 @@ body {
 #anuncio ul {
   font: 14px Tahoma, Geneva, sans-serif;
   list-style-image: url(./images/vineta.png);
+}
+hr {
+  display: block;
+  border: 0;
+  height: 10px;
+  background-image: url(./images/subrayado.png);
+  margin-top: 0;
 }

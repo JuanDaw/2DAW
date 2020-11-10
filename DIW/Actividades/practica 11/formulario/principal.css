@@ -1,0 +1,385 @@
+/*********************/
+/* BASIC */
+/*********************/
+
+body {
+  font-family: "Century Gothic", "Gill Sans", Arial, sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+ol,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+br.clear {
+  height: 1px;
+  clear: both;
+  line-height: 1px;
+  background-color: #00cc33;
+}
+
+/*********************/
+/* LAYOUT */
+/*********************/
+
+#principal {
+  width: 760px;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #999999;
+}
+
+#cuerpo {
+  border-right: 1px solid #999999;
+  border-left: 1px solid #999999;
+  padding: 3px 3px 0 6px;
+  float: left;
+  width: 424px;
+}
+
+#subNav {
+  width: 150px;
+  float: left;
+  background-color: #fbef99;
+}
+
+#banner {
+  background-image: url(images/bg/banner_bg.jpg);
+  background-repeat: repeat-x;
+  background-position: left top;
+  width: 759px;
+  border-bottom: 1px solid #999999;
+}
+
+#announce {
+  float: left;
+  width: 166px;
+  border-top: 10px solid #294e56;
+  margin-top: 3px;
+  background: url(images/bg/announce_bg.jpg) repeat-x left top;
+  margin-left: 3px;
+  line-height: 95%;
+  margin-right: 3px;
+}
+#copyright {
+  clear: both;
+  margin-left: 150px;
+  border: 1px solid #999999;
+  border-right: none;
+  font-size: 12px;
+  padding-left: 6px;
+}
+
+/*********************/
+/* BANNER STYLES */
+/*********************/
+#background {
+  background-image: url(images/bg/banner_flower.jpg);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+/* image replacement technique */
+#banner p.logo {
+  background: url(images/logo.gif) no-repeat left top;
+  height: 70px;
+  text-indent: -5000px;
+}
+
+#nav {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#nav li {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0;
+  float: left;
+}
+
+#nav a {
+  display: block;
+  font-size: 11px;
+  color: #d6ecae;
+  text-decoration: none;
+  background-color: #294e56;
+  padding: 2px 2px 2px 3px;
+  width: 8em;
+  margin-left: 2px;
+  border-right: 1px solid #73afb7;
+  border-bottom: 1px solid #73afb7;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+#nav a:hover {
+  background: #73afb7;
+  border-right: 1px solid #14556b;
+  border-bottom: 1px solid #14556b;
+  color: #fbef99;
+}
+
+/*highlight "you are here" buttons*/
+#home #nav a#homeLink,
+#feature #nav a#linkCaracteristicas {
+  background: #73afb7;
+  border-right: 1px solid #14556b;
+  border-bottom: 1px solid #14556b;
+  color: #fbef99;
+}
+
+/*********************/
+/* cuerpo SECTION STYLES */
+/*********************/
+#cuerpo h1 {
+  color: #5f9794;
+  font: bold 24px "Century Gothic", "Gill Sans", Arial, sans-serif;
+}
+#subForm {
+  text-align: center;
+}
+#nombre {
+  background-color: #fbef99;
+  width: 300px;
+}
+#email {
+  background-color: #fbef99;
+  width: 300px;
+}
+#comentarios {
+  background-color: #fbef99;
+  width: 310px;
+}
+#subForm > p:nth-child(1) {
+  margin-left: 140px;
+  font-weight: bold;
+}
+#subForm > p:nth-child(2) {
+  margin-left: 60px;
+  font-weight: bold;
+}
+#subForm > p:nth-child(3) {
+	margin-left: 160px;
+	font-weight: bold;
+}
+#subForm > p:nth-child(3) label {
+	font-weight: lighter;
+}
+#subForm > p:nth-child(4) {
+  margin-right: 195px;
+  font-weight: bold;
+}
+#subForm > p:nth-child(5) {
+  margin-left: 5px;
+  font-weight: bold;
+}
+#subForm > p:nth-child(6) {
+  text-align: center;
+}
+#suscribe {
+  background-color: #d6ecae;
+}
+
+/*********************/
+/* ANNOUNCEMENT STYLES */
+/*********************/
+
+#announce h2 {
+  font-size: 14px;
+}
+#announce a {
+  font-size: 12px;
+  display: block;
+  text-decoration: none;
+  color: #102536;
+  padding: 3px 5px;
+  border-bottom: 1px solid #14556b;
+}
+#announce .title {
+  font-weight: bold;
+  display: block;
+}
+#announce a:hover {
+  background-color: #5f9794;
+  color: #fbef99;
+}
+
+#announce ul {
+  list-style: none;
+}
+
+#announce li {
+  display: inline; /* for IE 7 and earlier white space bug */
+}
+/*********************/
+/* PAGE SPECIFIC STYLES */
+/*********************/
+
+/* HOME */
+/* no left sidebar--stretch cuerpo entire distance */
+#home #cuerpo {
+  margin-left: 0;
+  width: 577px;
+}
+/* copyright fits page */
+#home #copyright {
+  margin-left: 0;
+  padding: 3px 0 3px 30px;
+  font-style: italic;
+}
+
+.section {
+  display: block;
+  font-weight: normal;
+  color: #d6ecae;
+}
+
+.feature {
+  margin-left: 10px;
+  border-top: 10px solid #fdd041;
+  clear: both;
+  border-bottom: 1px solid #fff !important;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.feature h2 {
+  font-size: 18px;
+  color: #294e56;
+}
+
+.feature img {
+  float: right;
+  margin-left: 10px;
+  border: 10px solid #fdd041;
+  border-top: none;
+}
+
+.feature2 img {
+  border-color: #73afb7;
+}
+
+.feature3 img {
+  border-color: #fbef99;
+}
+
+.feature4 img {
+  border-color: #cbd893;
+}
+
+.feature2 {
+  border-color: #73afb7;
+}
+
+.feature3 {
+  border-color: #fbef99;
+  margin-bottom: 10px;
+}
+
+.feature4 {
+  border-color: #cbd893;
+}
+
+.feature p.fLink a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #102536;
+  font-size: 11px;
+  text-transform: uppercase;
+  background: #d6ecae url(images/arrow.gif) no-repeat right center;
+  padding: 1px 15px 2px 5px;
+}
+
+.feature p.fLink {
+  margin-top: 4px;
+}
+
+.feature p.fLink a:hover {
+  color: #fdd041;
+  text-decoration: none;
+  background-color: #294e56;
+}
+
+#home #cuerpo h1#lead {
+  background: url(images/caracteristicas/tomato.jpg) no-repeat right top;
+  color: #fbef99;
+  padding-top: 130px;
+  padding-left: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 5px;
+}
+#subNav li a {
+  font-size: 12px;
+  text-decoration: none;
+  display: block;
+  width: 138px;
+  background: url(images/bg/side_nav_bg3.jpg) repeat-x;
+  padding: 2px 6px;
+  color: #14556b;
+  border-bottom: 1px solid #d6ecae;
+}
+
+#subNav li a:hover {
+  background: url(images/bg/side_nav_bg.jpg);
+  color: #102536;
+}
+.col2 #announce {
+  float: left;
+  margin-bottom: 10px;
+}
+.col2 #cuerpo {
+  float: right;
+  border-right: none;
+  width: 573px;
+}
+.col2 #copyright {
+  margin-left: 0px;
+}
+#cuerpo h2 {
+  font-size: 1.2em;
+  margin-top: 15px;
+  color: #666666;
+}
+.col2 #cuerpo h1 {
+  color: #333333;
+  border-bottom: 1px dashed #666;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+.col2 .section {
+  display: inline;
+  color: #999999;
+}
+.floatRight {
+  float: right;
+  margin: 0 10px 2px 15px;
+}
+img.floatRight {
+  border: 2px solid #000000;
+}
+table {
+  font-family: "Times New Roman", Times, serif;
+}
+#cuerpo #subForm p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#cuerpo p.privacy {
+  color: #73afb7;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  font-size: 0.85em;
+}
