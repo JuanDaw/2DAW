@@ -1,0 +1,32 @@
+#logo {
+  float: left;
+  width: 350px;
+  height: 200px;
+}
+#cabecera {
+  height: 200px;
+  margin-left: 350px;
+  margin-bottom: 20px;
+}
+#cabecera h1 {
+  display: block;
+  height: 150px;
+  text-align: center;
+  font-size: 6em;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 40px;
+  padding-bottom: 0;
+}
+#menucabecera {
+  text-align: center;
+  list-style: none;
+  height: 30px;
+  border-top: 1px dashed gray;
+  border-bottom: 1px dashed gray;
+  padding: 10px 10px 10px 10px;
+}
+#menucabecera li {
+  display: inline;
+  margin: 20px 20px 20px 20px;
+}
