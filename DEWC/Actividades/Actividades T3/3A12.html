@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 12</title>
+</head>
+<body>
+    <h3>12. Solicitar una frase desde teclado, almacenar cada palabra en un array y mostrar los siguientes datos:
+        <ul>
+            <li>La primera palabra de la frase</li>
+            <li>La última palabra de la frase.</li>
+            <li>El número de palabras de la frase</li>
+        </ul>
+    </h3>
+    <script>
+        var frase = prompt("Introduce tu frase:");
+        var arrayCadena = frase.split(" ");
+
+        document.write("<p>Tu frase es: " + frase + "</p>");
+        document.write("<p>La primera palabra de la frase es: " + arrayCadena[0] + "</p>");
+        document.write("<p>La ultima palabra de la frase es: " + arrayCadena[arrayCadena.length - 1] + "</p>");
+        document.write("<p>La frase tiene " + arrayCadena.length + " palabras</p>");
+    </script>
+</body>
+</html>
