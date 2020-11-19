@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 11</title>
+</head>
+
+<body>
+    <h3>
+        11. Modifica el ejercicio anterior para que ahora sea una calculadora modo programador y te permita convertir
+        entre bases numéricas.
+    </h3>
+    <div class="resultado">
+        <ul>
+            <li>Pulse 1 para sumar</li>
+            <li>Pulse 2 para restar</li>
+            <li>Pulse 3 para multiplicar</li>
+            <li>Pulse 4 para dividir</li>
+            <li>Pulse 5 para obtener el módulo</li>
+            <li>Pulse 6 para cambiar de base</li>
+            <li>Pulse 7 para salir</li>
+        </ul>
+    </div>
+
+    <div id="entrada1" style="color:red;font-size:1.6em"></div>
+    <div id="entrada2" style="color:red;font-size:1.6em"></div>
+
+    <script>
+        function operacion() {
+            var x = Number(prompt("Sr. usuario, introduce una opcion"));
+            var w = document.getElementById('resultado');
+            switch (x) {
+                case 1:
+                    w.innerHTML = input1 + input2;
+                    break;
+                case 2:
+                    w.innerHTML = input1 - input2;
+                    break;
+                case 3:
+                    w.innerHTML = input1 / input2;
+                    break;
+                case 4:
+                    w.innerHTML = input1 * input2;
+                    break;
+                case 5:
+                    w.innerHTML = input1 % input2;
+                    break;
+                case 6:
+                    var base_actual = Number(prompt("Introduce el numero a cambiar"));
+                    var base_destino = Number(prompt("Introduce la base de destino"));
+                    if ((base_destino > 0) && (base_destino <= 16)) {
+                        w.innerHTML = base_actual.toString(base_destino);
+                    } else {
+                        alert("Valor introducido incorrecto");
+                    }
+                    break;
+                case 7:
+                    document.body.innerHTML = "¡Se ha salido!";
+                    break;
+            }
+        }
+
+        function iniciar() {
+            input1 = Number(prompt("Sr. usuario, introduce un valor"));
+            input2 = Number(prompt("Sr. usuario, introduce el segundo valor"));
+
+            document.getElementById('entrada1').innerHTML = "El valor uno es → " + input1;
+            document.getElementById('entrada2').innerHTML = "El valor dos es → " + input2;
+        }
+
+        iniciar()
+    </script>
+
+    <form style="margin: auto;text-align: center">
+        <input type="button" value="Operacion" onclick="operacion();" />
+    </form>
+    <div id="resultado" style="color:green;font-size:1.6em;margin:auto;text-align:center;border: 1px solid black;">
+        Pulsa para realizar una operacion
+    </div>
+</body>
+
+</html>
