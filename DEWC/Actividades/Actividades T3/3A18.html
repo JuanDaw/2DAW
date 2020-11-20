@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 18</title>
+</head>
+<body>
+    <h3>
+        18.Solicita el ingreso de la coordenada de un punto. El formato a ingresar por teclado es: 
+        (999,999). Los números pueden tener entre 1 y 3 dígitos.
+    </h3>
+    <script>
+        var comprobar = new RegExp('^\\([0-9]{1,3}\\,[0-9]{1,3}\\)$', 'g');
+        var sw = true;
+
+        while (sw) {
+            var coordenada = prompt('Introduce la coordenada a comprobar');
+            if (comprobar.test(coordenada)) {
+                document.write("<p>La coordenada aportada es válida: " + coordenada + "</p>");
+                sw = false;
+            } else {
+                alert('Coordenada no válida')
+            }
+        }
+    </script>
+</body>
+</html>
