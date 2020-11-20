@@ -21,7 +21,7 @@
 #menucabecera {
   text-align: center;
   list-style: none;
-  height: 30px;
+  height: 25px;
   border-top: 1px dashed gray;
   border-bottom: 1px dashed gray;
   padding: 10px 10px 10px 10px;
@@ -29,4 +29,35 @@
 #menucabecera li {
   display: inline;
   margin: 20px 20px 20px 20px;
+}
+main {
+  display: inline-block;
+  margin-top: 2%;
+}
+#principal {
+  float: left;
+  width: 60%;
+  margin-left: 20%;
+}
+#noticias {
+  float: left;
+  width: 20%;
+  margin-left: -80%;
+}
+#noticias h2 {
+  margin-left: 10px;
+}
+.historia {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 10px 10px 10px 10px;
+}
+.title {
+  display: block;
+  text-transform: uppercase;
+}
+#nav {
+  float: right;
+  width: 20%;
 }
