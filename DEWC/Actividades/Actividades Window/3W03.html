@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3</title>
+    <script>
+        var t;
+
+        function horaActual() {
+            f = new Date();
+            x = "Hora actual:" + f.getHours() + ":" + f.getMinutes() + ":" + f.getSeconds();
+            document.title = x;
+        }
+
+        function iniciar() {
+            t = setInterval(horaActual, 1000);
+        }
+
+        function parar() {
+            clearInterval(t);
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="titulo1">Título de página Dinámico</h1>
+    <div>
+        Establece un título del documento (document.title) de forma dinámica, mostrando cada segundo la hora actual,
+        como vemos en la figura.
+        <form>
+            <input type="button" value="Iniciar" onclick="iniciar()" />
+            <input type="button" value="Parar" onclick="parar()" />
+        </form>
+    </div>
+</body>
+
+</html>
