@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 27</title>
+</head>
+
+<body>
+    <h3>27.Modificar los ejercicios 24, 25 y 26 para que el patrón buscado lo pueda decidir el usuario en tiempo de
+        ejecución</h3>
+    <script>
+        var frase = prompt("Introduce tu frase:");
+        var arrayFrase = frase.split(" ");
+        var patron = prompt("Introduce tu patrón");
+        var comprobar = new RegExp(patron, "gi");
+        var opcion = Number(prompt("Elige si mostrar (0) o contar (1)"));
+        var cont = 0;
+
+        if (opcion == 0) {
+            for (var x in arrayFrase) {
+                var palabra = arrayFrase[x];
+                if (comprobar.test(palabra)) {
+                    document.write("<p>La palabra " + palabra + " sigue el patrón dado</p>");
+                }
+            }
+        } else if (opcion == 1) {
+            for (var x in arrayFrase) {
+                var palabra = arrayFrase[x];
+                if (comprobar.test(palabra)) {
+                    cont += 1;
+                }
+            }
+            document.write("<p>El número de palabras que siguen el patrón son: " + cont + "</p>");
+        } else {
+            document.write("<p>La opción es incorrecta</p>");
+        }
+    </script>
+</body>
+
+</html>

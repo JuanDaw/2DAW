@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 24</title>
+</head>
+
+<body>
+    <h3>24. Buscar las palabras que comiencen por 'lo' dentro de una cadena.</h3>
+    <script>
+        var comprobar = /^(lo).*/gi;
+        var frase = prompt("Introduce tu frase:");
+        var arrayFrase = frase.split(" ");
+        for (var x in arrayFrase) {
+            var palabra = arrayFrase[x];
+            if (comprobar.test(palabra)) {
+                document.write("<p>La palabra " + palabra + " empieza por 'lo'</p>");
+            }
+        }
+    </script>
+</body>
+
+</html>

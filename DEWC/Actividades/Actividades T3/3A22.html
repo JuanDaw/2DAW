@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=º, initial-scale=1.0">
+    <title>Actividad 22</title>
+</head>
+
+<body>
+    <h3>22. Buscar la primera palabra de cada frase</h3>
+    <script>
+        var comprobar = /^\w*\s/mi;
+        while (true) {
+            var frase = prompt("Introduce una frase:");
+            document.write("<p>La primera palabra de tu frase es: " + comprobar.exec(frase) + "</p>");
+            var but = Number(prompt("Introduce enter si quieres salir sino un número distinto a 0"));
+            if (but == 0) {
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
