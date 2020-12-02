@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {padding: 0; margin: 0; box-sizing: border-box;}
+        body{background-color: green;}
+        .contenedor{
+            background: white;
+            width: 100%;
+            height: 80vh;
+            overflow: hidden;
+            margin: auto;
+            position: relative;
+        }
+
+        .arbolito{
+            width: 600px;
+            height: auto;
+            position: absolute;
+            bottom:-20px;
+            right: 50%;
+            transform: translateX(50%);
+            animation: sube 3s ease-out 1;
+        }
+        .adorno{
+            width: 30px;
+            height: 30px;
+            background: gold;
+            display: inline-block;
+            border-radius: 50%;
+            position: absolute;
+            animation: 
+                aparece 3s linear 3s 1 backwards,
+                cambio 3s linear infinite 
+                ;
+        }
+
+        .bolita1{
+            top: 50%;
+            left: 48%;
+            animation-delay: 3s;
+        }
+        .bolita2{
+            top:57%;
+            left:49%;
+            animation-delay: 5s;
+        }
+        .bolita3{
+            top:70%;
+            left:49%;
+            animation-delay: 7s;
+        }
+        .bolita4{
+            top:83%;
+            left:49%;
+            animation-delay: 9s;
+        }
+
+
+        @keyframes sube {
+            from { transform: translateX(50%) translateY(100%); }
+            to { transform: translateX(50%) translateY(0%) ; }
+        }
+
+        @keyframes cambio {
+            0%{background: gold; box-shadow: 0 0 2em gold;}
+            33% {background: green; box-shadow: 0 0 2em green;}
+            66% {background: blue; box-shadow: 0 0 2em blue;}
+            100% {background: orange; box-shadow: 0 0 2em orange;}
+        }
+
+        @keyframes aparece {
+            from {opacity:0;}
+            to {opacity: 1;}
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <img src="http://sprites.comohacerpara.com/img/07200g-hacer-arbol-navidad-diferente.jpg" alt="arbol de navidad" class="arbolito" />
+        <span class="bolita1 adorno"></span>
+        <span class="bolita2 adorno"></span>
+        <span class="bolita3 adorno"></span>
+        <span class="bolita4 adorno"></span>
+    </div>
+</body>
+</html>
