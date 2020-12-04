@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de bordes</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        .caja {
+            background-color: black;
+            width: 200px;
+            height: 100px;
+            display: inline-block;
+            margin-right: 10%;
+            margin-bottom: 10%;
+            color: white;
+        }
+        h4 {
+            color: darkgoldenrod;
+            text-shadow: 0 -10px 15px red;
+        }
+
+        #cajaA {
+            border: 1px solid black;
+            border-radius: 0 0 4em 0;
+        }
+
+        #cajaB {
+            border: 1px solid black;
+            border-radius: 0 0 4em 0 / 0 0 3em 0;
+        }
+
+        #cajaC {
+            border: 1px solid black;
+            border-radius: 0 0 3em 0 / 0 0 5em 0;
+        }
+
+        #cajaD {
+            border: 1px solid black;
+            border-radius: 1em 3em 1em 3em / 1em 5em 1em 5em;
+        }
+
+        #cajaE {
+            border: 1px solid black;
+            border-radius: 2em 1em 2em 1em / 1em 2em 1em 2em;
+        }
+
+        #cajaF {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            border-radius: 50em;
+        }
+    </style>
+</head>
+<body>
+    <h4>Ejercicios de bordes</h4>
+    <div id="cajaA" class="caja"><p>A</p></div>
+    <div id="cajaB" class="caja"><p>B</p></div>
+    <div id="cajaC" class="caja"><p>C</p></div>
+    <div id="cajaD" class="caja"><p>D</p></div>
+    <div id="cajaE" class="caja"><p>E</p></div>
+    <div id="cajaF" class="caja"><p>F</p></div>
+</body>
+</html>
