@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 12</title>
+    <script>
+        var dni = document.getElementById("dni").value;
+        var nom = document.getElementById("nom").value;
+        var fecha = document.getElementById("fecha").value;
+        var email = document.getElementById("email").value;
+        console.log(dni, nom, fecha, email);
+    </script>
+</head>
+<body>
+    <h3>
+        12. Valida el siguiente formulario. Valide también que no puedan dejarse en blanco. 
+        Validar el formulario ayudándote de los atributos de html5. La validación se debe 
+        realizar poco a poco según el usuario vaya rellenando los campos. En caso de introducir 
+        un valor incorrecto,limpiar el campo.
+    </h3>
+    <form action="" id="form">
+        <label for="dni">DNI:</label>
+        <input type="text" name="dni" id="dni"/>
+        (Formato válido: 99.999.999-X)
+        <br>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nom">
+        (Introduzca al menos un nombre y un apellido. Max: 2 nombres y 2 apellidos)
+        <br>
+        <label for="fecha">F. Nac:</label>
+        <input type="text" name="fecha" id="fecha">
+        (Formato válido: dd/mm/yyyy)
+        <br>
+        <label for="email">E-mail:</label>
+        <input type="text" name="email" id="email">
+        (xxx@yyy.zzz)
+        <br>
+        <label for="web">Pág Web:</label>
+        <input type="text" name="web" id="web">
+        (Formato válido: http://www.xxxx.yyy)
+        <br>
+        <label for="pass">Contraseña:</label>
+        <input type="text" name="pass" id="pass">
+        (Debe contener entre 8 y 10 caracteres)
+        <br>
+        <label for="pass2">Confirmar contraseña:</label>
+        <input type="text" name="pass2" id="pass2">
+        (Debe contener entre 8 y 10 caracteres)
+        <br>
+        <input type="submit" value="Guardar">
+        <input type="button" value="Ver">
+    </form>
+</body>
+</html>
