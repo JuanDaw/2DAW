@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 7</title>
+    <script>
+        window.onload = function () {
+            document.addEventListener('error', error);
+        };
+
+        function error(elEvento) {
+            var evento = elEvento || window.event;
+            document.getElementById("div").innerHTML = "La imagen no se ha cargado correctamente";
+        }
+    </script>
+</head>
+<body>
+    <h3>
+        7.Realiza una aplicación que tenga una imagen, y que muestre un mensaje 
+        indicando si la imagen no se ha cargado correctamente, ya sea por un error o 
+        porque el usuario lo haya detenido.
+    </h3>
+    <img src="./img2.jpg"/>
+    <div id="div" style="color: red;"></div>
+</body>
+</html>

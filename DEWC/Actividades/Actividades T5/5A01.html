@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,32 +10,35 @@
             var evento = elEvento || window.event;
             switch (evento.type) {
                 case "click":
-                    document.getElementsByTagName("div").innerHTML = "Usted ha hecho click con el botón izquierdo";
+                    document.getElementById("div").innerHTML = "Usted ha hecho click con el botón izquierdo";
                     break;
                 case "contextmenu":
-                    document.getElementsByTagName("div").innerHTML = "Usted ha hecho click con el botón derecho";
+                    document.getElementById("div").innerHTML = "Usted ha hecho click con el botón derecho";
                     break;
                 case "wheel":
-                    document.getElementsByTagName("div").innerHTML = "Usted ha hecho scroll con la rueda";
+                    document.getElementById("div").innerHTML = "Usted ha hecho scroll con la rueda";
                     break;
                 default:
-                    document.getElementsByTagName("div").innerHTML = "Usted no ha hecho nada";
+                    document.getElementById("div").innerHTML = "Usted no ha hecho nada";
                     break;
             }
         }
-        
-        document.getElementById("main").addEventListener('click', raton);
-        document.getElementById("main").addEventListener('contextmenu', raton);
-        document.getElementById("main").addEventListener('wheel', raton);
+        window.onload = function () {
+            document.addEventListener('click', raton);
+            document.addEventListener('contextmenu', raton);
+            document.addEventListener('wheel', raton);
+        };
     </script>
 </head>
+
 <body>
-    <main id="main">
+    <main>
         <h3>
-            1. Realizar un script que cuando pulse el usuario con el botón del ratón en cualquier sitio 
+            1. Realizar un script que cuando pulse el usuario con el botón del ratón en cualquier sitio
             de la pantalla, identifique si ha pulsado con el botón derecho, izquierdo o la rueda central.
         </h3>
-        <div></div>
+        <div id="div"></div>
     </main>
 </body>
+
 </html>

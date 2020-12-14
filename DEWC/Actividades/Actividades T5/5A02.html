@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2</title>
+    <script>
+        window.onload = function () {
+            document.addEventListener('keydown', teclado);
+        };
+        function teclado(elEvento) {
+            var evento = elEvento || window.event;
+            var tecla = evento.key;
+            var abajo = 0;
+            var arriba = 0;
+            var izq = 0;
+            var dcha = 0;
+            document.getElementById("div").style.border = "5px solid black";
+            document.getElementById("div").style.width = "200px";
+            document.getElementById("div").style.height = "200px";
+            document.getElementById("div").style.position = "relative";
+            switch (tecla) {
+                case "ArrowDown":
+                    abajo += 200;
+                    document.getElementById("div").style.top = abajo + "px";
+                    break;
+                case "ArrowLeft":
+                    izq += 200;
+                    document.getElementById("div").style.right = izq + "px";
+                    break;
+                case "ArrowRight":
+                    dcha += 200;
+                    document.getElementById("div").style.left = dcha + "px";
+                    break;
+                case "ArrowUp":
+                    arriba += 200;
+                    document.getElementById("div").style.bottom = arriba + "px";
+                    break;
+                default:
+                    document.getElementById("div").innerHTML = "Usted no ha pulsado una tecla correcta"
+                    document.getElementById("div").style.color = "red";
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <main id="main">
+        <h3>
+            2. Realizar un script que permita mover una caja dentro de la ventana del navegador tanto con las teclas de
+            desplazamiento del teclado central como con las del teclado numérico.
+        </h3>
+        <div id="div"></div>
+    </main>
+</body>
+
+</html>

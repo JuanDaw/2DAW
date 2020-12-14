@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 5</title>
+    <script>
+        window.onload = function () {
+            document.addEventListener('mousedown', cambiarImg);
+            document.addEventListener('mouseup', devolverImg);
+        };
+
+        function cambiarImg(elEvento) {
+            var evento = elEvento || window.event;
+            document.getElementById("div").style.background = "url(./img2.jpg) no-repeat center";
+        }
+
+        function devolverImg(elEvento) {
+            var evento = elEvento || window.event;
+            document.getElementById("div").style.background = "url(./img1.jpg) no-repeat center";
+        }
+    </script>
+    <style>
+        #div {
+            background: url(./img1.jpg) no-repeat center;
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h3>
+        5. Coloque en la aplicación una imagen, y que se cambie por otra imagen, 
+        y ésta se mantenga mientras el usuario está pulsando algún botón del ratón, 
+        cuando suelte debe volver la primera imagen.
+    </h3>
+    <div id="div"></div>
+</body>
+</html>
