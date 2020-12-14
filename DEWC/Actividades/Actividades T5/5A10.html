@@ -3,24 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 8</title>
+    <title>Actividad 10</title>
     <script>
         window.onload = function () {
-            document.getElementById("google").addEventListener('click', enviar);
+            document.getElementById("enviar").addEventListener('click', dia);
         };
 
-        function enviar(elEvento) {
+        function dia(elEvento) {
             var evento = elEvento || window.event;
-            window.location.href = "https://www.google.com"
+            var option = document.getElementsByClassName("dias");
+            for (i = 0; i < 5; i++) {
+                if (option[i].checked == true) {
+                    var val = option[i].value;
+                }
+            }
+            var pref = document.getElementById("pref");
+            switch (val) {
+                case "l":
+                    pref.childNodes[1].selected = "selected";
+                    break;
+                case "m":
+                    pref.childNodes[3].selected = "selected";
+                    break;
+                case "x":
+                    pref.childNodes[5].selected = "selected";
+                    break;
+                case "j":
+                    pref.childNodes[7].selected = "selected";
+                    break;
+                case "v":
+                    pref.childNodes[9].selected = "selected";
+                    break;
+            }
         }
     </script>
 </head>
 <body>
     <h3>
-        8. Realiza el siguiente formulario <br>
-        - Cuando pulse Haz clic para enviar información, se enviará la información a 
-        un correo electrónico en texto plano.<br> 
-        - Cuando pulse en Haz clic sobre mí, se redirigirá a la página de google.
+        10.Modifica el formulario anterior, siendo el día preferente el día 
+        que haya marcado como disponible. Si marca varios, que coja el último.
     </h3>
     <form action="mailto:direccion@correo.com" id="form">
         <fieldset>

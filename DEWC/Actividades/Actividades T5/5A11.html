@@ -3,24 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 8</title>
+    <title>Actividad 11</title>
     <script>
         window.onload = function () {
-            document.getElementById("google").addEventListener('click', enviar);
+            document.getElementById("enviar").addEventListener('click', fondo);
         };
 
-        function enviar(elEvento) {
+        function fondo(elEvento) {
             var evento = elEvento || window.event;
-            window.location.href = "https://www.google.com"
+            var radio = document.getElementsByClassName("radio");
+            for (i = 0; i < 3; i++) {
+                if (radio[i].checked == true) {
+                    var val = radio[i].value;
+                }
+            }
+            var form = document.getElementById("form");
+            switch (val) {
+                case "r":
+                    form.style.backgroundColor = "red"
+                    break;
+                case "v":
+                    form.style.backgroundColor = "green"
+                    break;
+                case "a":
+                    form.style.backgroundColor = "blue"
+                    break;
+            }
         }
     </script>
 </head>
 <body>
     <h3>
-        8. Realiza el siguiente formulario <br>
-        - Cuando pulse Haz clic para enviar información, se enviará la información a 
-        un correo electrónico en texto plano.<br> 
-        - Cuando pulse en Haz clic sobre mí, se redirigirá a la página de google.
+        11.Modifica el formulario anterior, según el color de icono seleccionado, 
+        cambie el color de fondo del formulario.
     </h3>
     <form action="mailto:direccion@correo.com" id="form">
         <fieldset>

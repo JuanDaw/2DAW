@@ -3,24 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 8</title>
+    <title>Actividad 9</title>
     <script>
         window.onload = function () {
-            document.getElementById("google").addEventListener('click', enviar);
+            document.getElementById("enviar").addEventListener('click', correo);
         };
 
-        function enviar(elEvento) {
+        function correo(elEvento) {
             var evento = elEvento || window.event;
-            window.location.href = "https://www.google.com"
+            var valor = document.getElementById("opc").value;
+            if (valor == "") {
+                alert("Tienes que seleccionar una asignatura")
+            } else {
+                var form = document.getElementById("form");
+                switch (valor) {
+                    case "mat":
+                        form.action = "mailto:direccion@correo.com";
+                        break;
+                    case "dwec":
+                        form.action = "mailto:direccion1@correo.com";
+                        break;
+                    case "ing":
+                        form.action = "mailto:direccion2@correo.com";
+                        break;
+                    case "dwes":
+                        form.action = "mailto:direccion3@correo.com";
+                        break;
+                    case "eie":
+                        form.action = "mailto:direccion4@correo.com";
+                        break;
+                }
+            }
         }
     </script>
 </head>
 <body>
     <h3>
-        8. Realiza el siguiente formulario <br>
-        - Cuando pulse Haz clic para enviar información, se enviará la información a 
-        un correo electrónico en texto plano.<br> 
-        - Cuando pulse en Haz clic sobre mí, se redirigirá a la página de google.
+        9.Modifica el formulario anterior, según la materia seleccionada, debe enviarle 
+        el cuestionario a un profesor distinto.
     </h3>
     <form action="mailto:direccion@correo.com" id="form">
         <fieldset>
@@ -33,9 +53,9 @@
         </fieldset>
 
         <label for="radio">Elige un color:</label><br>
-        <input type="radio" name="radio" class="radio" value="r">Rojo<br>
-        <input type="radio" name="radio" class="radio" value="v">Verde<br>
-        <input type="radio" name="radio" class="radio" value="a">Azul<br>
+        <input type="radio" name="radio" id="radio" value="r">Rojo<br>
+        <input type="radio" name="radio" id="radio" value="v">Verde<br>
+        <input type="radio" name="radio" id="radio" value="a">Azul<br>
 
         <label for="opciones">Selecciona una asignatura:</label>
         <select name="opciones" id="opc">
@@ -49,11 +69,11 @@
         <br>
 
         <label for="dias">Selecciona los dias con disponibilidad:</label><br>
-        <input type="checkbox" name="dias" class="dias" value="l">Lunes<br>
-        <input type="checkbox" name="dias" class="dias" value="m">Martes<br>
-        <input type="checkbox" name="dias" class="dias" value="x">Miércoles<br>
-        <input type="checkbox" name="dias" class="dias" value="j">Jueves<br>
-        <input type="checkbox" name="dias" class="dias" value="v">Viernes<br>
+        <input type="checkbox" name="dias" id="dias" value="l">Lunes<br>
+        <input type="checkbox" name="dias" id="dias" value="m">Martes<br>
+        <input type="checkbox" name="dias" id="dias" value="x">Miércoles<br>
+        <input type="checkbox" name="dias" id="dias" value="j">Jueves<br>
+        <input type="checkbox" name="dias" id="dias" value="v">Viernes<br>
 
         <label for="pref">Selecciona el día preferente:</label>
         <select name="pref" id="pref">
