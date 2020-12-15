@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 16</title>
+    <script src="cookie.js"></script>
+    <script>
+        window.onload = function() {
+            document.getElementById("votar").addEventListener('click', votar);
+        }
+
+        function votar(elEvento) {
+            var ios = getCookie("ios");
+            var and = getCookie("and");
+            var wp = getCookie("wp");
+            var otro = getCookie("otro");
+            if(ios == "" && and == "" && wp == "" && otro == ""){
+                y = setCookie("ios", 0, 1);
+                y = setCookie("and", 0, 1);
+                y = setCookie("wp", 0, 1);
+                y = setCookie("otro", 0, 1);
+                ios = 0;
+                and = 0;
+                wp = 0;
+                otro = 0;
+            }
+
+            var radio = document.getElementsByClassName("encuesta");
+            for (let i = 0; i < 4; i++) {
+                if (radio[i].checked) {
+                    var id = radio[i].value;
+                    switch (id) {
+                        case "ios":
+                            ios++;
+                            y = setCookie("ios", ios, 1);
+                            break;
+                        case "and":
+                            and++;
+                            y = setCookie("and", and, 1);
+                            break;
+                        case "wp":
+                            wp++;
+                            y = setCookie("wp", wp, 1);
+                            break;
+                        case "otro":
+                            otro++;
+                            y = setCookie("otro", otro, 1);
+                            break;
+                    }
+                }
+            }
+
+            var cont = String(eval(ios + "+" + and + "+" + wp + "+" + otro));
+            document.getElementById("ios").max = cont;
+            document.getElementById("ios").value = ios;
+
+            document.getElementById("and").max = cont;
+            document.getElementById("and").value = and;
+
+            document.getElementById("wp").max = cont;
+            document.getElementById("wp").value = wp;
+
+            document.getElementById("otro").max = cont;
+            document.getElementById("otro").value = otro;
+        }
+    </script>
+</head>
+<body>
+    <h3>
+        16. Realice un script que permite llevar a cabo la siguiente encuesta:
+    </h3>
+    <label for="encuesta">¿Qué sistema operativo móvil te gusta más?</label><br>
+    <input type="radio" name="encuesta" class="encuesta" value="ios">IOS<br>
+    <input type="radio" name="encuesta" class="encuesta" value="and">Android<br>
+    <input type="radio" name="encuesta" class="encuesta" value="wp">Windows Phone<br>
+    <input type="radio" name="encuesta" class="encuesta" value="otro">Otro<br>
+    <input type="submit" value="Votar" id="votar">
+    <p>IOS: <meter id="ios"></meter></p>
+    <p>Android: <meter id="and"></meter></p>
+    <p>Windows Phone: <meter  id="wp"></meter></p>
+    <p>Otro: <meter id="otro"></meter></p>
+</body>
+</html>

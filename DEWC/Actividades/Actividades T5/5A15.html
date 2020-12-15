@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 15</title>
+    <script src="cookie.js"></script>
+    <script>
+        count = getCookie("counter");
+        if(isNaN(count)){
+            y = setCookie("counter", 0, 1);
+            count = 0;
+        }
+        count++;
+        alert("Visitastes esta pagina " + count + " veces!!");
+        y = setCookie("counter", count, 1);
+    </script>
+</head>
+<body>
+    <h3>
+        15. Realice un script que permita llevar un contador de todas las veces que se ha visitado una página.
+    </h3>
+    <div id="res"></div>
+</body>
+</html>

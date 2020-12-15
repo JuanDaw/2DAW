@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 12</title>
+    <title>Actividad 13</title>
+    <script src="cookie.js"></script>
     <script>
         window.onload = function() {
             document.getElementById("dni").addEventListener('blur', validarDNI);
@@ -13,20 +14,24 @@
             document.getElementById("web").addEventListener('blur', validarWeb);
             document.getElementById("pass").addEventListener('blur', validarPass);
             document.getElementById("pass2").addEventListener('blur', validarPass2);
+            document.getElementById("ver").addEventListener('click', ver);
         }
         function validarDNI(elEvento) {
             var dniE = document.getElementById("dni");
             var dni = dniE.value;
             dniE.pattern = "^[0-9]{2}[.][0-9]{3}[.][0-9]{3}[-][A-Z]$";
             if (dni == "" || dni == null || dni.length == 0) {
+                alert("No puede ser vacío");
                 return false;
             }
             if (!dniE.checkValidity()) {
                 if (dniE.validity.patternMismatch) {
-                    dniE.value = ""
+                    alert("Tu dni " + dni + " no es correcto.");
+                    dniE.value = "";
                 }
                 return false;
             }
+            setCookie("dni", dni);
             return true;
         }
         function validarNombre(elEvento) {
@@ -34,14 +39,17 @@
             var nom = nomE.value;
             nomE.pattern = "^[a-zA-Z]+\\s([a-zA-Z]+\\s){0,2}[a-zA-Z]+$";
             if (nom == "" || nom == null || nom.length == 0) {
+                alert("No puede ser vacío");
                 return false;
             }
             if (!nomE.checkValidity()) {
                 if (nomE.validity.patternMismatch) {
-                    nomE.value = ""
+                    alert("Tu nombre " + nom + " no es correcto.");
+                    nomE.value = "";
                 }
                 return false;
             }
+            setCookie("nombre", nom);
             return true;
         }
 
@@ -50,14 +58,17 @@
             var fecha = fechE.value;
             fechE.pattern = "^\\d{2}/\\d{2}/\\d{4}$";
             if (fecha == "" || fecha == null || fecha.length == 0) {
+                alert("No puede ser vacío");
                 return false;
             }
             if (!fechE.checkValidity()) {
                 if (fechE.validity.patternMismatch) {
-                    fechE.value = ""
+                    alert("Tu fecha " + fecha + " no es correcta.");
+                    fechE.value = "";
                 }
                 return false;
             }
+            setCookie("fechaNac", fecha);
             return true;
         }
         function validarEmail(elEvento) {
@@ -65,14 +76,17 @@
             var email = emailE.value;
             emailE.pattern = "^\\w+@\\w+[.]\\w+$";
             if (email == "" || email == null || email.length == 0) {
+                alert("No puede ser vacío");
                 return false;
             }
             if (!emailE.checkValidity()) {
                 if (emailE.validity.patternMismatch) {
-                    emailE.value = ""
+                    alert("Tu email " + email + " no es correcto.");
+                    emailE.value = "";
                 }
                 return false;
             }
+            setCookie("email", email);
             return true;
         }
         function validarWeb(elEvento) {
@@ -80,14 +94,17 @@
             var web = webE.value;
             webE.pattern = "^http(s)?://w{3}[.]\\w+[.]\\w+$";
             if (web == "" || web == null || web.length == 0) {
+                alert("No puede ser vacío");
                 return false;
             }
             if (!webE.checkValidity()) {
                 if (webE.validity.patternMismatch) {
-                    webE.value = ""
+                    alert("Tu web " + web + " no es correcta.");
+                    webE.value = "";
                 }
                 return false;
             }
+            setCookie("pagWeb", web);
             return true;
         }
         function validarPass(elEvento) {
@@ -96,11 +113,14 @@
             passE.minLength = "8";
             passE.maxLength = "10";
             if (pass == "" || pass == null || pass.length == 0) {
+                alert("No puede ser vacío");
                 return false;
             }
             if (pass.length < 8 || pass.length > 10) {
+                alert("Tu contraseña " + pass + " no es correcta.");
                 passE.value = "";
             }
+            setCookie("password", pass);
             return true;
         }
         function validarPass2(elEvento) {
@@ -110,21 +130,28 @@
             pass2E.maxLength = "10";
             var pass = document.getElementById("pass").value;
             if (pass2 == "" || pass2 == null || pass2.length == 0) {
+                alert("No puede ser vacío");
                 return false;
             }
             if (pass2.length < 8 || pass2.length > 10 || pass !== pass2) {
+                alert("Tu contraseña " + pass2 + " no es correcta o no coincide.");
                 pass2E.value = "";
             }
             return true;
+        }
+
+        function ver(elEvento) {
+            var cookies = document.cookie;
+            document.getElementById("res").innerHTML = "Tus cookies son: " + cookies;
         }
     </script>
 </head>
 <body>
     <h3>
-        12. Valida el siguiente formulario. Valide también que no puedan dejarse en blanco. 
-        Validar el formulario ayudándote de los atributos de html5. La validación se debe 
-        realizar poco a poco según el usuario vaya rellenando los campos. En caso de introducir 
-        un valor incorrecto,limpiar el campo.
+        14. Modifique el ejercicio anterior para que cuando el usuario introduzca  
+        los  datoscorrectamente en    el    formulario  introduzca  estos  datos  
+        en cookies y proporcione al formulario un botón para que estos 
+        puedan ser leídos.    
     </h3>
     <form action="" id="form">
         <label for="dni">DNI:</label>
@@ -156,7 +183,8 @@
         (Debe contener entre 8 y 10 caracteres)
         <br>
         <input type="submit" value="Guardar">
-        <input type="button" value="Ver">
+        <input type="button" value="Ver" id="ver">
     </form>
+    <div id="res" style="color: blueviolet;"></div>
 </body>
 </html>

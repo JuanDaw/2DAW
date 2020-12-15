@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 12</title>
+    <title>Actividad 13</title>
     <script>
         window.onload = function() {
             document.getElementById("dni").addEventListener('blur', validarDNI);
@@ -19,11 +19,13 @@
             var dni = dniE.value;
             dniE.pattern = "^[0-9]{2}[.][0-9]{3}[.][0-9]{3}[-][A-Z]$";
             if (dni == "" || dni == null || dni.length == 0) {
+                alert("No puede ser vacío");
                 return false;
             }
             if (!dniE.checkValidity()) {
                 if (dniE.validity.patternMismatch) {
-                    dniE.value = ""
+                    alert("Tu dni " + dni + " no es correcto.");
+                    dniE.value = "";
                 }
                 return false;
             }
@@ -34,11 +36,13 @@
             var nom = nomE.value;
             nomE.pattern = "^[a-zA-Z]+\\s([a-zA-Z]+\\s){0,2}[a-zA-Z]+$";
             if (nom == "" || nom == null || nom.length == 0) {
+                alert("No puede ser vacío");
                 return false;
             }
             if (!nomE.checkValidity()) {
                 if (nomE.validity.patternMismatch) {
-                    nomE.value = ""
+                    alert("Tu nombre " + nom + " no es correcto.");
+                    nomE.value = "";
                 }
                 return false;
             }
@@ -50,11 +54,13 @@
             var fecha = fechE.value;
             fechE.pattern = "^\\d{2}/\\d{2}/\\d{4}$";
             if (fecha == "" || fecha == null || fecha.length == 0) {
+                alert("No puede ser vacío");
                 return false;
             }
             if (!fechE.checkValidity()) {
                 if (fechE.validity.patternMismatch) {
-                    fechE.value = ""
+                    alert("Tu fecha " + fecha + " no es correcta.");
+                    fechE.value = "";
                 }
                 return false;
             }
@@ -65,11 +71,13 @@
             var email = emailE.value;
             emailE.pattern = "^\\w+@\\w+[.]\\w+$";
             if (email == "" || email == null || email.length == 0) {
+                alert("No puede ser vacío");
                 return false;
             }
             if (!emailE.checkValidity()) {
                 if (emailE.validity.patternMismatch) {
-                    emailE.value = ""
+                    alert("Tu email " + email + " no es correcto.");
+                    emailE.value = "";
                 }
                 return false;
             }
@@ -80,11 +88,13 @@
             var web = webE.value;
             webE.pattern = "^http(s)?://w{3}[.]\\w+[.]\\w+$";
             if (web == "" || web == null || web.length == 0) {
+                alert("No puede ser vacío");
                 return false;
             }
             if (!webE.checkValidity()) {
                 if (webE.validity.patternMismatch) {
-                    webE.value = ""
+                    alert("Tu web " + web + " no es correcta.");
+                    webE.value = "";
                 }
                 return false;
             }
@@ -96,9 +106,11 @@
             passE.minLength = "8";
             passE.maxLength = "10";
             if (pass == "" || pass == null || pass.length == 0) {
+                alert("No puede ser vacío");
                 return false;
             }
             if (pass.length < 8 || pass.length > 10) {
+                alert("Tu contraseña " + pass + " no es correcta.");
                 passE.value = "";
             }
             return true;
@@ -110,9 +122,11 @@
             pass2E.maxLength = "10";
             var pass = document.getElementById("pass").value;
             if (pass2 == "" || pass2 == null || pass2.length == 0) {
+                alert("No puede ser vacío");
                 return false;
             }
             if (pass2.length < 8 || pass2.length > 10 || pass !== pass2) {
+                alert("Tu contraseña " + pass2 + " no es correcta o no coincide.");
                 pass2E.value = "";
             }
             return true;
@@ -121,10 +135,7 @@
 </head>
 <body>
     <h3>
-        12. Valida el siguiente formulario. Valide también que no puedan dejarse en blanco. 
-        Validar el formulario ayudándote de los atributos de html5. La validación se debe 
-        realizar poco a poco según el usuario vaya rellenando los campos. En caso de introducir 
-        un valor incorrecto,limpiar el campo.
+        13. Modifique el ejercicio anterior para que los mensajes sean personalizados.
     </h3>
     <form action="" id="form">
         <label for="dni">DNI:</label>
