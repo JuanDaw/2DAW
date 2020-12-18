@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2</title>
+    <script>
+        function iniciar() {
+            function Vehiculo(marca, modelo, color, anyo) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.color = color;
+                this.anyo = anyo;
+            }
+
+            var vehiculo1 = new Vehiculo("Ferrari", "Scaglietti", "Rojo", 2010);
+            var vehiculo2 = new Vehiculo("BMW", "Z4", "Blanco", 2010);
+            var vehiculo3 = new Vehiculo("Seat", "Toledo", "Azul", 1999);
+            var vehiculo4 = new Vehiculo("Fiat", "500", "Verde", 1995);
+            var arrayVehiculos = [vehiculo1, vehiculo2, vehiculo3, vehiculo4];
+
+            var cont = document.getElementById("cont");
+            var table = document.createElement("table");
+            table.border = "1";
+            var thead = document.createElement("thead");
+            var tr = document.createElement("tr");
+            var th1 = document.createElement("th");
+            th1.innerHTML = "Marca";
+            var th2 = document.createElement("th");
+            th2.innerHTML = "Modelo";
+            var th3 = document.createElement("th");
+            th3.innerHTML = "Color";
+            var th4 = document.createElement("th");
+            th4.innerHTML = "Año de fabricación";
+            tr.appendChild(th1);
+            tr.appendChild(th2);
+            tr.appendChild(th3);
+            tr.appendChild(th4);
+            thead.appendChild(tr);
+            table.appendChild(thead);
+            var tbody = document.createElement("tbody");
+            for (i = 0; i < arrayVehiculos.length; i++) {
+                tr = document.createElement("tr");
+                var td1 = document.createElement("td");
+                td1.innerHTML = arrayVehiculos[i].marca;
+                tr.appendChild(td1);
+                var td2 = document.createElement("td");
+                td2.innerHTML = arrayVehiculos[i].modelo;
+                tr.appendChild(td2);
+                var td3 = document.createElement("td");
+                td3.innerHTML = arrayVehiculos[i].color;
+                tr.appendChild(td3); 
+                var td4 = document.createElement("td");
+                td4.innerHTML = arrayVehiculos[i].anyo;
+                tr.appendChild(td4); 
+                tbody.appendChild(tr);
+            }
+            table.appendChild(tbody);
+            cont.appendChild(table);
+        }
+    </script>
+</head>
+
+<body>
+    <h3>
+        Modifica los ejercicios 9 y 13 de la unidad 4 de manera que la generación de las tablas y la selección de los
+        elementos se realice mediante métodos del DOM vistos en este tema.
+    </h3>
+    <input type="button" value="Mostrar tabla" onclick="iniciar();">
+    <div id="cont"></div>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+    <script>
+        function tabla() {
+            var arrayNom = [];
+            var nom = "";
+            var arrayNot = [];
+            var nota = "";
+            while (nom != "0" && nota != "x") {
+                nom = prompt("Introduce el nombre del alumno, pulsa 0 para parar");
+                if (nom != "0") {
+                    arrayNom.push(nom);
+                }
+                nota = prompt("Introduce la nota, pulsa x para parar");
+                if (nota != "x") {
+                    arrayNot.push(nota);
+                }
+            }
+            var arrayTotal = [arrayNom, arrayNot];
+
+            var cont = document.getElementById("cont");
+            var table = document.createElement("table");
+            table.border = "1";
+            var thead = document.createElement("thead");
+            var tr = document.createElement("tr");
+            var th1 = document.createElement("th");
+            th1.innerHTML = "Alumno";
+            var th2 = document.createElement("th");
+            th2.innerHTML = "Nota";
+            tr.appendChild(th1);
+            tr.appendChild(th2);
+            thead.appendChild(tr);
+            table.appendChild(thead);
+            var tbody = document.createElement("tbody");
+            for (let i = 0; i < arrayNom.length; i++) {
+                tr = document.createElement("tr");
+                for (let j = 0; j < arrayNot.length; j++) {
+                    var td = document.createElement("td");
+                    td.innerHTML = arrayTotal[j][i];
+                    tr.appendChild(td);
+                }
+                tbody.appendChild(tr);
+            }
+            table.appendChild(tbody);
+            cont.appendChild(table);
+        }
+    </script>
+</head>
+
+<body>
+    <h3>
+        Modifica los ejercicios 9 y 13 de la unidad 4 de manera que la generación de las tablas y la selección de los
+        elementos se realice mediante métodos del DOM vistos en este tema.
+    </h3>
+    <input type="button" value="Mostrar tabla" onclick="tabla();">
+    <div id="cont"></div>
+</body>
+
+</html>
