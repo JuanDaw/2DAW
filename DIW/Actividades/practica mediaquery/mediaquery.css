@@ -1,0 +1,39 @@
+@media screen and (max-width: 480px) {
+  #container {
+    float: none;
+    width: 480px;
+    height: 100%;
+  }
+  #nav {
+    float: none;
+    width: 480px;
+  }
+  #content {
+    float: none;
+    width: 480px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  #extras {
+    float: none;
+    width: 480px;
+    margin-bottom: 20px;
+  }
+  .feature-image {
+    visibility: hidden;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1000px) {
+  #content {
+    float: right;
+    margin-left: 0;
+    margin-right: 50px;
+  }
+  #extras {
+    width: 550px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+}
