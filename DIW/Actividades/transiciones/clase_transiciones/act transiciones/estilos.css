@@ -26,7 +26,7 @@
   transform: translateY(25%);
 }
 
-#b5:hover {
+#b5:focus {
   background-color: teal;
   font-size: large;
 }
