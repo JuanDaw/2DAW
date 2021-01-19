@@ -1,0 +1,36 @@
+.b {
+  width: 200px;
+  height: 50px;
+  background-color: chartreuse;
+  font-weight: bolder;
+  color: black;
+  transition-property: background-color, color, font-size, transform;
+  transition-duration: 1.5s, 1s, 1s, 0.5s;
+}
+
+#b1:hover {
+  background-color: cadetblue;
+  color: white;
+}
+
+#b2:hover {
+  transform: rotate(180deg);
+}
+
+#b3:active {
+  transform: scale(4);
+}
+
+#b4:active {
+  background-color: tomato;
+  transform: translateY(25%);
+}
+
+#b5:hover {
+  background-color: teal;
+  font-size: large;
+}
+
+a {
+  text-decoration: none;
+}
