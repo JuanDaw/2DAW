@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkcyan;
+}
+
+.reloj {
+  background: url(./reloj.jpg) no-repeat center white;
+  background-size: cover;
+  width: 600px;
+  height: 600px;
+  border-radius: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#h {
+  width: 9px;
+  height: 100px;
+  background-color: blue;
+  position: absolute;
+  animation-name: horas;
+  animation-duration: 3600s;
+  animation-delay: 30s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes horas {
+  0% {
+    transform: rotate(-360deg);
+  }
+}
+
+#min {
+  width: 7px;
+  height: 180px;
+  background-color: red;
+  position: absolute;
+  animation-name: min;
+  animation-duration: 600s;
+  animation-delay: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes min {
+  0% {
+    transform: rotate(-360deg);
+  }
+}
+
+#sec {
+  width: 5px;
+  height: 250px;
+  background-color: orange;
+  position: absolute;
+  animation-name: sec;
+  animation-duration: 60s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes sec {
+  0% {
+    transform: rotate(-360deg);
+  }
+}
+
+#punto {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  position: absolute;
+  border-radius: 50%;
+}
