@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocho</title>
+    <script src="./jquery.js"></script>
+    <script>
+        function esconderG() {
+            $("#g").hide(1000);
+        }
+
+        function esconderW() {
+            $("#w").hide(1000);
+        }
+    </script>
+</head>
+<body onload="esconder()">
+    <h1>Mi encabezado</h1>
+    <a href="www.google.es" id="g">Google</a>
+    <a href="www.wikipedia.org" id="w" target="_blank">Wikipedia</a>
+    <br>
+    <button id="b" onclick="esconderG()">Ocultar Blank</button>
+    <button id="nb" onclick="esconderW()">Ocultar NoBlank</button>
+</body>
+</html>
