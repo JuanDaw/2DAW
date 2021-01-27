@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 1</title>
+    <script src="./jquery.js"></script>
+    <script>
+        var table = $("<table id='tabla'></table>");
+        var thead = $("<thead></thead>");
+        var th = $("<th>Nombre</th>");
+        thead.append(th);
+        th = $("<th>Apellido</th>");
+        thead.append(th);
+        th = $("<th>DNI</th>");
+        thead.append(th);
+        th = $("<th>Cantidad a deber</th>");
+        thead.append(th);
+        table.append(thead);
+
+        var datos = [
+            ["Juan", "Villoria", "220145", 0],
+            ["Ana", "Vidal", "124784", 0],
+            ["Pepe", "Mat", "147852", 100],
+            ["Antonio", "López", "102487", 0],
+            ["Celia", "Listán", "325875", 0],
+            ["Lidia", "Axel", "956321", 300],
+            ["Juana", "Pepón", "457852", 550],
+            ["Luis", "Torres", "951753", 0],
+            ["Joana", "Mateo", "000154", 0],
+            ["Raquel", "Monte", "456951", 600]
+        ]
+        var tbody = $("<tbody></tbody>");
+
+        function pintarTabla(clientes) {
+            if (clientes != []) {
+                $(clientes).each(
+                    function (i) {
+                        var tr = $("<tr></tr>");
+                        $(clientes[i]).each(
+                            function (j) {
+                                var td = $("<td></td>");
+                                td.html(clientes[i][j]);
+                                tr.append(td);
+                            }
+                        )
+                        tbody.append(tr);
+                    }
+                )
+                table.append(tbody);
+                $("body").append(table);
+            } else {
+                console.log("Los clientes no pueden ser vacios");
+            }
+            var input = $("<p>Nombre: <input type='textarea' id='nom'></p>");
+            $("body").append(input);
+            input = $("<p>Apellidos: <input type='textarea' id='ape'></p>");
+            $("body").append(input);
+            input = $("<p>DNI: <input type='textarea' id='dni'></p>");
+            $("body").append(input);
+            input = $("<p>A deber: <input type='textarea' id='deb'></p>");
+            $("body").append(input);
+            input = $("<input type='button' id='anya' value='Añadir' onclick='anyadir()'>");
+            $("body").append(input);
+
+            function anyadir() {
+
+            }
+
+        }
+
+        function pintar() {
+            pintarTabla(datos);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="Iniciar" id="inicio" onclick="pintar()">
+</body>
+
+</html>
