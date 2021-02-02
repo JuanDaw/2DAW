@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diecinueve</title>
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#b1").on('click', function(e) {
+                $("#uno").fadeToggle()
+            });
+
+            $("#b2").on('click', function(e) {
+                $("#dos").fadeToggle("slow");
+            });
+
+            $("#b3").on('click', function(e) {
+                $("#tres").fadeToggle(3000);
+            });
+        });
+    </script>
+    <style>
+        .dv {
+            background-color: coral;
+            border: 2px dashed black;
+            width: 200px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="uno" class="dv">
+        <p>Prueba de texto</p>
+        <input type="button" value="View" id="b1">
+    </div>
+    <div id="dos" class="dv">
+        <p>Prueba de texto</p>
+        <input type="button" value="View" id="b2">
+    </div>
+    <div id="tres" class="dv">
+        <p>Prueba de texto</p>
+        <input type="button" value="View" id="b3">
+    </div>
+</body>
+</html>

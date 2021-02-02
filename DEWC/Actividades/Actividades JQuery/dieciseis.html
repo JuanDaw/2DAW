@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dieciseis</title>
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(function (e) {
+            $("#btn").on('click', function (e) {
+                $("#p").hide("fast");
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1>Esto es un encabezado</h1>
+    <p id="p">Esto es un párrafo</p>
+    <input type="button" value="Hide me" id="btn">
+</body>
+</html>

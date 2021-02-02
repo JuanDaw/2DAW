@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quince</title>
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(function (e) {
+            $("#b1").on('click', function (e) {
+                $("#uno").hide(6000);
+            });
+    
+            $("#b2").on('click', function (e) {
+                $("#dos").hide(6000);
+            });
+        });
+    </script>
+    <style>
+        .cont {
+            background-color: burlywood;
+            border: 2px solid black;
+            width: 300px;
+            height: 200px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="uno" class="cont">
+        <h4>UNO</h4>
+        <input type="button" value="Hide me" id="b1">
+        <p>Esto es un párrafo de prueba</p>
+    </div>
+    <div id="dos" class="cont">
+        <h4>DOS</h4>
+        <input type="button" value="Hide me" id="b2">
+        <p>Esto es otro párrafo de prueba</p>
+    </div>
+</body>
+</html>
