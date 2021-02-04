@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veintiuno</title>
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#dos").slideUp();
+            $("#b1").on('click', function (e) {
+                $("#dos").slideDown(3000);
+            });
+        });
+    </script>
+    <style>
+        .b {
+            width: 200px;
+            height: 100px;
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="uno" class="b">
+        <p>Pulsa para mover la caja de abajo</p>
+        <input type="button" value="Mover" id="b1">
+    </div>
+    <div id="dos" class="b">
+        <p>Se movió</p>
+    </div>
+</body>
+
+</html>

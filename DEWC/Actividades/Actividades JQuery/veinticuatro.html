@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veinticuatro</title>
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#b1").on('click', function (e) {
+                $("#dv").animate({
+                    left: "375px",
+                    width: "150px"
+                });
+            })
+        });
+    </script>
+    <style>
+        #dv {
+            width: 500px;
+            height: 200px;
+            background-color: cornflowerblue;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="dv">
+        <p>Hola</p>
+    </div>
+    <input type="button" value="Mover" id="b1">
+</body>
+
+</html>
