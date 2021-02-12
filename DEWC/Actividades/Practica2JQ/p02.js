@@ -35,6 +35,9 @@ $(document).ready(function () {
                     var dentro = $("#divD");
                     dentro.fadeOut('slow', function () {
                         var circulo = $("<div class='circulo'>");
+                        circulo.hover(cambiaColor);
+                        circulo.on('click', cambiaOpacidad);
+                        // circulo.on('mouseout', daOpacidad);
                         dentro.append(circulo);
                     });
                     dentro.fadeIn('slow', function () {
@@ -46,11 +49,37 @@ $(document).ready(function () {
                     });
                 });
             }
-            
             // Comportamiento círculos
-            $(".circulo").hover()
+            $(".circulo").hover(cambiaColor);
 
+            function cambiaColor() {
+                $(this).toggleClass("amarillo");
+            }
+
+            $(".circulo").on('click', cambiaOpacidad);
+
+            function cambiaOpacidad() {
+                $(this).toggleClass("opacidad");
+                $(this).on('click', function (e) {
+                    if (num != "1") {
+                        $(this).fadeOut('fast', function (e) {
+                            num = parseInt(num) - 1;
+                            $("#enc").text(num);
+                        })
+                    } else {
+                        alert("No se puede eliminar el único círculo que queda.")
+                    }
+                })
+            }
+
+            // $(".circulo").on('mouseout', daOpacidad);
+
+            // function daOpacidad() {
+            //     $(this).animate({
+            //         opacity: "1"
+            //     });
+            //     preventDefault();
+            // }
         });
-
     })
 });
