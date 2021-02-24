@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3</title>
+    <link rel="stylesheet" href="../bootstrap-4.6.0-dist/bootstrap-4.6.0-dist/css/bootstrap.css">
+    <style>
+        body {
+            text-align: center;
+        }
+        .borde {
+            margin: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row bg-success">Header</div>
+        <div class="row">
+            <div class="col-6 col-sm-3 bg-info offset-md-3">1</div>
+            <div class="col-6 col-sm-3 bg-info">2</div>
+            <div class="w-100 d-none d-md-block"></div>
+            <div class="col-6 col-sm-3 bg-info">3</div>
+            <div class="col-6 col-sm-3 bg-info offset-md-6">4</div>
+        </div>
+        <div class="row bg-warning d-none d-sm-block d-md-none">Tablet</div>
+        <div class="row">
+            <div class="col-6 col-sm-3 bg-danger order-md-4">a</div>
+            <div class="col-6 col-sm-3 bg-danger order-md-3">b</div>
+            <div class="col-6 col-sm-3 bg-danger order-md-2">c</div>
+            <div class="col-6 col-sm-3 bg-danger order-md-1">d</div>
+        </div>
+        <div class="row bg-warning d-none d-md-block">Desktop</div>
+        <div class="row bg-warning d-sm-none">Mobile</div>
+        <div class="row">
+            <div class="col-12 col-md-3 col-sm-6 bg-primary order-md-2"> :D </div>
+            <div class="col-md-3 col-sm-6 bg-primary d-none d-sm-block offset-md-3  order-md-1"> :( </div>
+        </div>
+        <div class="row bg-success d-none d-sm-block">Footer</div>
+    </div>
+</body>
+</html>
