@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 AJAX</title>
+    <script src="jquery-3.5.1-descargado.js"></script>
+    <script>
+        $(function () {
+            $("#crear").click(() => {
+                let nombre = $("#nombre").val();
+                let apellido = $("#apellido").val();
+
+                let datosEnviar = {
+                    "first_name": nombre,
+                    "last_name": apellido
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: "https://reqres.in/api/users",
+                    dataType: "json",
+                    data: datosEnviar
+                })
+                .done((datos, texto, jq) => {
+                    let div = $("<div>")
+                    div.text("Código estado: " + jq.status)
+
+                    let respuestaEnTexto = jq.responseText
+                    
+                    let id = datos.id;
+                    let nombre = datos.first_name;
+                    let apellido = datos.last_name;
+
+                    $("body").append(
+                        div,
+                        $("<div>").text("Respuesta: " + respuestaEnTexto),
+                        $("<div>").text("ID: " + id),
+                        $("<div>").text("Nombre: " + nombre),
+                        $("<div>").text("Apellido: " + apellido)
+                    )
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <input id="nombre">
+    <input id="apellido">
+    <button id="crear">Añadir usuario</button>
+</body>
+</html>
