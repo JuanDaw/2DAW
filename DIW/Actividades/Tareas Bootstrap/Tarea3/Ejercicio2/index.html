@@ -6,18 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarea 3</title>
     <link rel="stylesheet" href="../bootstrap-4.6.0-dist/bootstrap-4.6.0-dist/css/bootstrap.css">
+    <style>
+        @media screen and (max-width: 575px) {
+            #header {
+                background-color: bisque;
+                display: flex;
+                justify-content: center;
+            }
+            #uno {
+                background-color: crimson;
+            }
+            #dos {
+                background-color: aqua;
+                display: flex;
+                justify-content: center;
+            }
+            #tres {
+                background-color: crimson;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+        @media screen and (min-width: 576px) and (max-width: 767px) {
+            #header {
+                background-color: aqua;
+            }
+            #uno {
+                background-color: crimson;
+            }
+            #dos {
+                background-color: crimson;
+                display: flex;
+                justify-content: flex-end;
+            }
+            #tres {
+                background-color: chartreuse;
+                display: flex;
+                justify-content: center;
+                
+            }
+        }
+        @media screen and (min-width: 768px) {
+            #header {
+                background-color: chartreuse;
+            }
+            #uno {
+                background-color: crimson;
+                display: flex;
+                justify-content: center;
+            }
+            #dos {
+                background-color: crimson;
+                display: flex;
+                justify-content: center;
+            }
+            #tres {
+                background-color: crimson;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row">Header</div>
+        <div id="header" class="row">Header</div>
         <div class="row">
-            <div class="col-12">1</div>
-            <div class="col-12">2</div>
-            <div class="col-12">3</div>
+            <div id="uno" class="col-12 col-sm-6 col-md-4">1</div>
+            <div id="dos" class="col-12 col-sm-6 col-md-4">2</div>
+            <div id="tres" class="col-12 col-md-4">3</div>
         </div>
         <div class="row">
-            <div class="col-12">Footer 1</div>
-            <div class="col-12">Footer 2</div>
+            <div class="col-12 col-md-6 bg-secondary">Footer 1</div>
+            <div class="col-12 col-md-6 bg-secondary">Footer 2</div>
         </div>
     </div>
 </body>
