@@ -1,0 +1,16 @@
+#ppal {
+    height: 100vh; 
+    background-color: bisque;
+}
+
+#nav {
+    height: 5vh;
+}
+
+#sect {
+    height: 90vh;
+}
+
+#foot {
+    height: 5vh;
+}

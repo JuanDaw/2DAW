@@ -5,8 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página web</title>
+    <link rel="stylesheet" href="./bootstrap-4.6.0-dist/bootstrap-4.6.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-    
+    <div class="container-fluid" id="ppal">
+        <div class="row text-center" id="nav">
+            <div class="col-3 bg-success h-100 border border-dark">
+                <a href="./auxiliar.html">Auxiliar</a>
+            </div>
+            <div class="col-3 bg-success h-100 border border-dark">
+                <a href="./secundario.html">Secundario</a>
+            </div>
+            <div class="col-3 bg-success h-100">
+                <img src="logotipo.png" alt="Logotipo" height="40vh">
+            </div>
+            <div class="col-3 bg-success h-100">
+                <div class="input-group">
+                    <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search"
+                      aria-describedby="search-addon" />
+                    <button type="button" class="btn btn-outline-primary">Buscar</button>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-content-center" id="sect">
+            <div id="carousel" class="carousel slide col-12" data-ride="carousel">
+
+                <ul class="carousel-indicators">
+                  <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel" data-slide-to="1"></li>
+                  <li data-target="#carousel" data-slide-to="2"></li>
+                </ul>
+              
+                <div class="carousel-inner">
+                  <div class="carousel-item active col-12">
+                    <img src="1.jpg" alt="Foto 1" width="100%">
+                    <div class="carousel-caption">
+                        <h3>Queen</h3>
+                    </div>
+                  </div>
+                  <div class="carousel-item col-12">
+                    <img src="2.jpg" alt="Foto 2" width="100%">
+                    <div class="carousel-caption">
+                        <h3>Love of Lesbian</h3>
+                    </div>
+                  </div>
+                  <div class="carousel-item col-12">
+                    <img src="3.jpg" alt="Foto 3" width="100%">
+                    <div class="carousel-caption">
+                        <h3>Abba</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carousel" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#carousel" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+        <div class="row bg-secondary justify-content-end align-items-center" id="foot">
+            <footer> 
+                Creado por Juan Antonio Villoria del Moral &copy; 2021
+            </footer>
+        </div>
+    </div>
 </body>
 </html>
