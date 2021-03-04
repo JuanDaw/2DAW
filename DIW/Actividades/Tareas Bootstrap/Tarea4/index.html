@@ -14,16 +14,16 @@
 <body>
     <div class="container-fluid" id="ppal">
         <div class="row text-center" id="nav">
-            <div class="col-3 bg-success h-100 border border-dark">
+            <div class="col-12 col-sm-3 bg-success border border-dark">
                 <a href="./auxiliar.html">Auxiliar</a>
             </div>
-            <div class="col-3 bg-success h-100 border border-dark">
+            <div class="col-12 col-sm-3 bg-success border border-dark">
                 <a href="./secundario.html">Secundario</a>
             </div>
-            <div class="col-3 bg-success h-100">
+            <div class="col-12 col-sm-3 bg-success">
                 <img src="logotipo.png" alt="Logotipo" height="40vh">
             </div>
-            <div class="col-3 bg-success h-100">
+            <div class="col-12 col-sm-3 bg-success">
                 <div class="input-group">
                     <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search"
                       aria-describedby="search-addon" />
@@ -32,7 +32,10 @@
             </div>
         </div>
         <div class="row justify-content-center align-content-center" id="sect">
-            <div id="carousel" class="carousel slide col-12" data-ride="carousel">
+            <div class="col-12">
+              <h1>Grupos musicales</h1>
+            </div>
+            <div id="carousel" class="carousel slide col-sm-8 col-12" data-ride="carousel">
 
                 <ul class="carousel-indicators">
                   <li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -41,20 +44,20 @@
                 </ul>
               
                 <div class="carousel-inner">
-                  <div class="carousel-item active col-12">
-                    <img src="1.jpg" alt="Foto 1" width="100%">
+                  <div class="carousel-item active">
+                    <img src="1.jpg" alt="Foto 1" class="img">
                     <div class="carousel-caption">
                         <h3>Queen</h3>
                     </div>
                   </div>
-                  <div class="carousel-item col-12">
-                    <img src="2.jpg" alt="Foto 2" width="100%">
+                  <div class="carousel-item">
+                    <img src="2.jpg" alt="Foto 2" class="img">
                     <div class="carousel-caption">
                         <h3>Love of Lesbian</h3>
                     </div>
                   </div>
-                  <div class="carousel-item col-12">
-                    <img src="3.jpg" alt="Foto 3" width="100%">
+                  <div class="carousel-item">
+                    <img src="3.jpg" alt="Foto 3" class="img">
                     <div class="carousel-caption">
                         <h3>Abba</h3>
                     </div>
@@ -67,6 +70,7 @@
                 <a class="carousel-control-next" href="#carousel" data-slide="next">
                   <span class="carousel-control-next-icon"></span>
                 </a>
+                
             </div>
         </div>
         <div class="row bg-secondary justify-content-end align-items-center" id="foot">
