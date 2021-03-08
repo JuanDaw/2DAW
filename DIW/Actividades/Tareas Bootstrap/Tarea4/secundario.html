@@ -7,31 +7,104 @@
     <title>Secundario</title>
     <link rel="stylesheet" href="./bootstrap-4.6.0-dist/bootstrap-4.6.0-dist/css/bootstrap.css">
     <link rel="stylesheet" href="custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div class="container-fluid" id="ppal">
-        <div class="row text-center" id="nav">
-            <div class="col-3 bg-success h-100 border border-dark">
-                <a href="./index.html">Inicio</a>
-            </div>
-            <div class="col-3 bg-success h-100 border border-dark">
-                <a href="./auxiliar.html">Auxiliar</a>
-            </div>
-            <div class="col-3 bg-success h-100">
-                <img src="logotipo.png" alt="Logotipo" height="40vh">
-            </div>
-            <div class="col-3 bg-success h-100">
-                <div class="input-group">
-                    <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search"
-                      aria-describedby="search-addon" />
-                    <button type="button" class="btn btn-outline-primary">Buscar</button>
+        <div class="row text-center">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light col-12">
+                <a class="navbar-brand" href="#"><img src="./logotipo.png" alt="Logotipo" id="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Grupos musicales</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Lista de enlaces
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="http://www.google.es">Google</a>
+                          <a class="dropdown-item" href="http://www.wikipedia.org">Wikipedia</a>
+                      </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  </form>
                 </div>
-            </div>
+              </nav>
         </div>
-        <div class="row justify-content-center align-content-center" id="sect">
-            
+        <div class="row justify-content-center align-content-center">
+            <table class="table table-bordered table-striped table-dark col-12">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Grupo musical</th>
+                    <th scope="col">Artista principal</th>
+                    <th scope="col">Años</th>
+                    <th scope="col">Disco más exitoso</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Queen</td>
+                    <td>Freddie Mercury</td>
+                    <td>Muere a los 45 años</td>
+                    <td><img src="./queen.jpg" alt="queen" class="portada"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Love of Lesbian</td>
+                    <td>Santi Balmes</td>
+                    <td>50 años</td>
+                    <td><img src="./lol.jpg" alt="loveoflesbian" class="portada"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Abba</td>
+                    <td>Anni-Frid Lyngstad</td>
+                    <td>75 años</td>
+                    <td><img src="./abba.jpg" alt="abba" class="portada"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Maldita Nerea</td>
+                    <td>Jorge Ruiz Flores</td>
+                    <td>45 años</td>
+                    <td><img src="./mn.jpg" alt="malditanerea" class="portada"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>ACDC</td>
+                    <td>Angus Young</td>
+                    <td>65 años</td>
+                    <td><img src="./acdc.jpg" alt="acdc" class="portada"></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>La oreja de Van Goth</td>
+                    <td>Leire Martínez</td>
+                    <td>41 años</td>
+                    <td><img src="./lodvg.jpg" alt="laorejadevangoth" class="portada"></td>
+                  </tr>
+                </tbody>
+              </table>
         </div>
-        <div class="row bg-secondary justify-content-end align-items-center" id="foot">
+        <div class="row bg-secondary justify-content-end align-items-center">
             <footer> 
                 Creado por Juan Antonio Villoria del Moral &copy; 2021
             </footer>
