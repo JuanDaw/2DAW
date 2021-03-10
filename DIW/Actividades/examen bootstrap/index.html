@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Bootstrap JAVDM</title>
+    <link rel="stylesheet" href="./examen/css/bootstrap.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row bg-secondary">
+            <div class="col-12 col-sm-10">
+                <div class="row justify-content-center align-content-center">
+                    <div class="col-12 col-sm-6 mt-2">
+                        <img src="./examen/noticia1.png" alt="N1" class="img-fluid border border-white">
+                        <h2 class="text-center">Este es un titular cualquiera</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-sm-4">
+                        <img src="./examen/noticia2.png" alt="N1" class="img-fluid">
+                        <h2 class="font-weight-light">Este es un titular cualquiera</h2>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <img src="./examen/noticia3.png" alt="N1" class="img-fluid">
+                        <h2 class="font-weight-light">Este es un titular cualquiera</h2>
+                    </div>
+                    <div class="col-6 col-sm-4">
+                        <img src="./examen/noticia4.png" alt="N1" class="img-fluid">
+                        <h2 class="font-weight-light">Este es un titular cualquiera</h2>
+                    </div>
+                    <div class="col-6 col-sm-4 offset-sm-8">
+                        <img src="./examen/noticia5.png" alt="N1" class="img-fluid">
+                        <h2 class="font-weight-light">Este es un titular cualquiera</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 d-none d-sm-block">
+                <img src="./examen/banner.png" alt="Banner" class="h-100 w-100">
+            </div>
+        </div>
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-info col-12">
+                <a class="navbar-brand text-dark" href="#">20 segundos</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon text-dark"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" href="#">Inicio <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Noticias
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Local</a>
+                                <a class="dropdown-item" href="#">Autonómico</a>
+                                <a class="dropdown-item" href="#">Estatal</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Mundial</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Deportes</a>
+                        </li>
+                    </ul>
+                    <p class="font-weight-light">Tus noticias, de forma directa</p>
+                </div>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
